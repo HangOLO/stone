@@ -8,7 +8,11 @@ import { createAudioControl } from "./modules/audioControl.js";
 import { ASSET_MANIFEST, reportMissingAssets } from "./modules/assetManagement.js";
 import { applyDeploymentAdaptation } from "./modules/deploymentAdaptation.js";
 
-const REQUIRED_GUIDANCE = "30 秒內盡量點擊石頭。進度越高代表你越接近推開入口。";
+const REQUIRED_GUIDANCE = [
+  "30秒內怎樣點也推不到100%。",
+  "若我們都推不開，當時婦女更不可能移開封墓巨石。",
+  "真正問題是：墓為何空了？"
+].join("\n");
 
 const store = createGameStore();
 const scene = createScreenScene({

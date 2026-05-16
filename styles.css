@@ -454,6 +454,7 @@ button {
   font-size: clamp(20px, 2.6vw, 30px);
   line-height: 1.55;
   font-weight: 750;
+  white-space: pre-line;
 }
 
 @media (max-width: 760px), (orientation: portrait) {
