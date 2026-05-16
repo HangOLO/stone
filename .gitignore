@@ -1,0 +1,21 @@
+assets/images/source/
+doc/
+assets/README.md
+assets/audio/README.md
+assets/images/README.md
+
+# Browser QA profiles and local caches should never be published.
+**/browser-qa/
+**/chrome-profile/
+**/profile-*/
+**/Cache/
+**/Code Cache/
+**/Crashpad/
+**/GPUCache/
+**/GrShaderCache/
+**/GraphiteDawnCache/
+
+# OS/editor noise.
+.DS_Store
+Thumbs.db
+*.log

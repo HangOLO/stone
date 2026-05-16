@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+    <meta name="theme-color" content="#f9d37a">
+    <title>古墓推石挑戰</title>
+    <link rel="stylesheet" href="./styles.css?v=pages-release-1">
+  </head>
+  <body>
+    <main id="app" class="app" data-state="idle" aria-live="polite">
+      <section id="start-screen" class="screen start-screen" data-screen="start">
+        <div class="start-title-stage">
+          <div class="start-title-art" aria-hidden="true"></div>
+          <button id="start-button" class="start-button-hotspot" type="button" data-control aria-label="開始遊戲">
+            <span class="visually-hidden">開始遊戲</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="game-screen" class="screen game-screen" data-screen="game" aria-hidden="true">
+        <div id="game-input-area" class="game-input-area">
+          <div class="tomb-scene tomb-scene--game" aria-hidden="true">
+            <div id="rock" class="stone stone--game"></div>
+          </div>
+
+          <div class="hud hud--time">
+            <span class="hud-label">時間</span>
+            <span id="time-value" class="hud-value">30</span>
+          </div>
+
+          <div class="hud hud--progress">
+            <div class="progress-header">
+              <span class="hud-label">進度</span>
+              <span id="progress-value" class="hud-value">0%</span>
+            </div>
+            <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="99" aria-valuenow="0" aria-label="推開入口進度">
+              <div id="progress-fill" class="progress-fill"></div>
+            </div>
+          </div>
+
+          <button id="mute-button" class="icon-button mute-button" type="button" data-control aria-pressed="false" aria-label="音效開啟">
+            <span id="mute-icon" aria-hidden="true">音</span>
+          </button>
+
+          <div id="tap-hint" class="tap-hint" aria-hidden="true">
+            <div class="tap-target" aria-hidden="true">
+              <img class="tap-ring" src="./assets/images/tap-ring-fx.png" alt="">
+              <img class="tap-hand" src="./assets/images/tap-hand.png" alt="">
+            </div>
+            <div class="tap-hint-text">連續點擊石頭，把入口推開</div>
+          </div>
+
+          <div id="end-overlay" class="end-overlay" hidden>
+            <div class="end-panel" role="dialog" aria-modal="true" aria-labelledby="end-title">
+              <h2 id="end-title">挑戰結束</h2>
+              <p class="score-line">總共點擊 <strong id="final-clicks">0</strong> 次</p>
+              <p class="teaching-text">30 秒內盡量點擊石頭。進度越高代表你越接近推開入口。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
