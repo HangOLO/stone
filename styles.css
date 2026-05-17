@@ -74,26 +74,26 @@ button {
 }
 
 .start-screen {
-  background: #f4c56d;
+  background: #087fe8;
 }
 
 .start-title-stage {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 133.333333vh;
-  width: 133.333333svh;
-  width: 133.333333dvh;
+  width: 177.683315vh;
+  width: 177.683315svh;
+  width: 177.683315dvh;
   height: 100vh;
   height: 100svh;
   height: 100dvh;
   transform: translate(-50%, -50%);
 }
 
-@media (min-aspect-ratio: 4 / 3) {
+@media (min-aspect-ratio: 1672 / 941) {
   .start-title-stage {
     width: 100vw;
-    height: 75vw;
+    height: 56.279904vw;
   }
 }
 
@@ -106,10 +106,10 @@ button {
 
 .start-button-hotspot {
   position: absolute;
-  left: 32.5%;
-  top: 76.5%;
-  width: 35%;
-  height: 15.5%;
+  left: 36.8%;
+  top: 75.9%;
+  width: 26.4%;
+  height: 16.6%;
   padding: 0;
   border: 0;
   border-radius: 999px;
